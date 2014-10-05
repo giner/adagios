@@ -51,3 +51,4 @@ install:
   - sudo chmod -R 777 /var/lib/nagios3
 notifications:
   email: false
+
