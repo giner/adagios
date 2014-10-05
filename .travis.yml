@@ -22,13 +22,13 @@ install:
   - sudo chown -R travis /etc/adagios/
   - sudo usermod -G www-data nagios
   - sudo sed -i 's/RUN.*/RUN="yes"/' /etc/default/npcd
+  - pip install https://github.com/pynag/pynag/zipball/master
   - sudo pip install okconfig
   - pip install okconfig || true
   - okconfig init
   - pip install $DJANGO_VERSION
   - pip install simplejson
   - pip install paramiko
-  - pip install https://github.com/pynag/pynag/zipball/master
   - python setup.py build
   - python setup.py install
   - cp -r adagios/etc/adagios/conf.d /etc/adagios/conf.d
