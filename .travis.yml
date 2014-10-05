@@ -30,6 +30,7 @@ install:
   - pynag config --set 'template_directory="/etc/nagios3/okconfig/templates"'  --filename /etc/okconfig.conf
   - pynag config --set 'examples_directory="/etc/nagios3/okconfig/examples"'  --filename /etc/okconfig.conf
   - pynag config --set 'destination_directory="/etc/nagios3/okconfig"' --filename /etc/okconfig.conf
+  - cat /etc/okconfig.conf
   - okconfig init
   - pip install $DJANGO_VERSION
   - pip install simplejson
